@@ -1,7 +1,7 @@
 import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
-import { Pressable } from 'react-native';
+import { View, Image, Pressable, StyleSheet } from 'react-native';
 
 import Colors from '@/constants/Colors';
 import { useColorScheme } from '@/components/useColorScheme';
@@ -29,10 +29,10 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Signal',
+          tabBarIcon: ({ color }) => <TabBarIcon name="cloud-download" color={color} />,
           headerRight: () => (
-            <Link href="/modal" asChild>
+            <Link href="Signal" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome
@@ -48,12 +48,109 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="threema"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Theema',
+          tabBarIcon: ({ color }) => <TabBarIcon name="plane" color={color} />,
+          headerRight: () => (
+            <Link href="Telegram" asChild>
+              <Pressable>
+                {({ pressed }) => (
+                  <FontAwesome
+                    name="info-circle"
+                    size={25}
+                    color={Colors[colorScheme ?? 'light'].text}
+                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                  />
+                )}
+              </Pressable>
+            </Link>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="simplex"
+        options={{
+          title: 'SimpleX',
+          tabBarIcon: ({ color }) => <TabBarIcon name="plane" color={color} />,
+          headerRight: () => (
+            <Link href="Telegram" asChild>
+              <Pressable>
+                {({ pressed }) => (
+                  <FontAwesome
+                    name="info-circle"
+                    size={25}
+                    color={Colors[colorScheme ?? 'light'].text}
+                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                  />
+                )}
+              </Pressable>
+            </Link>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="element"
+        options={{
+          title: 'Element',
+          tabBarIcon: ({ color }) => <TabBarIcon name="plane" color={color} />,
+          headerRight: () => (
+            <Link href="Telegram" asChild>
+              <Pressable>
+                {({ pressed }) => (
+                  <FontAwesome
+                    name="info-circle"
+                    size={25}
+                    color={Colors[colorScheme ?? 'light'].text}
+                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                  />
+                )}
+              </Pressable>
+            </Link>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="wechat"
+        options={{
+          title: 'Wechat',
+          tabBarIcon: ({ color }) => <TabBarIcon name="plane" color={color} />,
+          headerRight: () => (
+            <Link href="Telegram" asChild>
+              <Pressable>
+                {({ pressed }) => (
+                  <FontAwesome
+                    name="info-circle"
+                    size={25}
+                    color={Colors[colorScheme ?? 'light'].text}
+                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                  />
+                )}
+              </Pressable>
+            </Link>
+          ),
         }}
       />
     </Tabs>
+    // <View style={styles.container}>
+    //   <Image source={require('@/assets/images/splash.png')} style={styles.image} /> 
+
+    // </View>
   );
 }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     backgroundColor: '#fff', // Set your desired background color
+//   },
+//   image: {
+//     width: '105%',
+//     height: '105%',
+//     resizeMode: 'contain',
+//   },
+// });
+
+

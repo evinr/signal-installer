@@ -1,20 +1,23 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+# Ignore APK and AAB files (large binaries)
+*.apk
+*.aab
 
-# dependencies
+# Node modules
 node_modules/
 
 # Expo
 .expo/
+.expo-shared/
 dist/
 web-build/
-
-# Native
-*.orig.*
 *.jks
-*.p8
 *.p12
 *.key
 *.mobileprovision
+*.orig.*
+
+# Native
+*.p8
 
 # Metro
 .metro-health-check*
@@ -30,6 +33,29 @@ yarn-error.*
 
 # local env files
 .env*.local
+.env
+
+# credentials
+credentials.json
+google-services.json
+GoogleService-Info.plist
+google-credentials.json
+*.keystore
+debug.keystore
 
 # typescript
 *.tsbuildinfo
+expo-env.d.ts
+
+# Android/IntelliJ
+build/
+.idea
+.gradle
+local.properties
+*.iml
+*.hprof
+.cxx/
+
+# iOS
+ios/Pods/
+ios/build/
